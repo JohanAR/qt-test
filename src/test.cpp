@@ -6,8 +6,10 @@ SliderWithValue::SliderWithValue(QString labelText, int min, int max, int initia
 {
   QLabel *label = new QLabel(labelText);
 
+  validator = new QIntValidator(min, max, this);
+
   lineEdit = new QLineEdit();
-  lineEdit->setValidator(new QIntValidator(min, max));
+  lineEdit->setValidator(validator);
 
   slider = new QSlider(Qt::Orientation::Horizontal);
   slider->setMinimum(min);

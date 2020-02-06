@@ -19,6 +19,7 @@ private slots:
   void lineEditFinished();
 
 private:
+  QIntValidator *validator;
   QLineEdit *lineEdit;
   QSlider *slider;
 };
